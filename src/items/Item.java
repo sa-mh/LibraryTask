@@ -7,6 +7,7 @@ public abstract class Item{
 	private int pages;
 	private int yearPublished;
 	private int ID;
+	private static int members = 1;
 	private boolean checkedOut;
 	
 	//Implement an ID system in your Item class, utilising a static integer variable. 
@@ -15,14 +16,15 @@ public abstract class Item{
 		super();
 	}
 	
-	public Item(String name, String Author, int pages, int published, int id, boolean checkedOut)
+	public Item(String name, String Author, int pages, int published, boolean checkedOut)
 	{
 		super();
 		this.name = name;
 		this.author = Author;
 		this.pages = pages;
 		this.yearPublished = published;
-		this.ID = id;
+		this.ID = members;
+		members++;
 		this.checkedOut = checkedOut;
 	}
 	
@@ -57,9 +59,7 @@ public abstract class Item{
 	public void setPublishDate(int yearPublished) {
 		this.yearPublished = yearPublished;
 	}
-	public void setID(int id) {
-		this.ID = id;
-	}
+
 	public void setStatus(boolean status) {
 		this.checkedOut = status;
 	}

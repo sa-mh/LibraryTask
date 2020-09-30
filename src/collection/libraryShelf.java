@@ -21,11 +21,11 @@ public class libraryShelf {
 	public List<Item> getShelf(){
 		return this.shelf1;
 	}
-	//shelf to string to say what belong to the library
-	//maybe have a (out) next to anything thats checked out
+
 	public void printShelf() {
 		for(Item items: this.shelf1) {
 			items.printItem();
+			System.out.println("");
 		}
 	}
 	
